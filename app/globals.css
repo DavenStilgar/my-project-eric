@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+@keyframes grow {
+  0% {
+    width: 8rem; /* Initial small size */
+    height: 8rem; /* Initial small size */
+  }
+  100% {
+    width: 24rem; /* Final larger size */
+    height: 24rem; /* Final larger size */
+  }
+}
+
+.animate-grow {
+  animation: grow 4000s ease-in-out forwards; /* Adjust duration as needed */
+}
